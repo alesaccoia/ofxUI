@@ -977,12 +977,13 @@ public:
     
     virtual void removeWidgets()
     {
-		for(vector<ofxUIWidget *>::iterator it = widgets.begin(); it != widgets.end(); ++it)
-		{
-			ofxUIWidget *w = (*it);
-			removeWidget(w);
-		}
-        widgets.clear(); 
+      for(vector<ofxUIWidget *>::iterator it = widgets.begin(); it != widgets.end(); ++it)
+      {
+        ofxUIWidget *w = (*it);
+        removeWidget(w);
+      }
+      widgets.clear();
+      lastAdded = NULL;
     }
     
     void removeWidget(ofxUIWidget *widget)
